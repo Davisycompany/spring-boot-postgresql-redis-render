@@ -48,7 +48,7 @@ services:
     name: spring-postgres-redis-image
     runtime: image
     image:
-      url: https://spring-postgres-redis-dockerfile-te36.onrender.com
+      url: ghcr.io/davisycompany/spring-boot-postgresql-redis-render:main
     region: frankfurt
     plan: free
     healthCheckPath: /
