@@ -98,7 +98,7 @@ services:
     ipAllowList: # required
       - source: 0.0.0.0/0
         description: everywhere
-    plan: free # optional (defaults to starter instance type)
+    plan: free # optional (defaults to starter instance types)
 
 
 
