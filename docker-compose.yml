@@ -10,7 +10,7 @@ services:
     ports:
       - "5432:5432"
     environment:
-      POSTGRES_DB: postgres
-      POSTGRES_USER: user
-      POSTGRES_PASSWORD: pass
+      POSTGRES_DB: ${SPRING_DATASOURCE_SCHEMA-postgres}
+      POSTGRES_USER: ${SPRING_DATASOURCE_USERNAME:-user}
+      POSTGRES_PASSWORD: ${SPRING_DATASOURCE_PASSWORD:-pass}
 
