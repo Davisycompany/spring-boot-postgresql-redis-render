@@ -7,7 +7,7 @@ COPY . .
 RUN mvn clean package -DskipTests
 
 FROM eclipse-temurin:17-jre-alpine
-COPY --from=build . . /target/demo-1.0.jar demo.jar
+COPY --from=build ../target/demo-1.0.jar demo.jar
 EXPOSE 8080 
 ARG REDIS_HOST
 ARG REDIS_PORT
