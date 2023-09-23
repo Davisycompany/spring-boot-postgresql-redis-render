@@ -100,9 +100,6 @@ services:
         description: everywhere
     plan: free # optional (defaults to starter instance type)
 
-spring:
-  redis:
-    url: rediss://red-ck7f1n88elhc73a4819g:6drVBFAvvgEe1nyBbWZgu9FahQdpsZd3@frankfurt-redis.render.com:6379
 
 
 databases:
