@@ -17,7 +17,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name = "follower", uniqueConstraints = { @UniqueConstraint(columnNames = { "followerID", "userID" }) })
+@Table(name = "follower", uniqueConstraints = { @UniqueConstraint(columnNames = { "follower_id", "user_id" }) })
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -31,12 +31,12 @@ public class Follower{
 	@AllArgsConstructor
 	public static class Pk implements Serializable{
 		private static final long serialVersionUID = 1L;
-		int followerID;
-		int userID;
+		int follower_id;
+		int user_id;
 		
 		@Override
 		public String toString() {
-			return "Pk [followerID = " + followerID + ", userID = " + userID + "]";
+			return "Pk [follower_id = " + follower_id + ", user_id = " + user_id + "]";
 		}
 	}
 	
