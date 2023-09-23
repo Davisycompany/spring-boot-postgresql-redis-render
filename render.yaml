@@ -1,6 +1,7 @@
 services:
   - type: web
     name: spring-postgres-redis-dockerfile
+    buildCommand: mvn clean package -DskipTests
     runtime: docker
     region: frankfurt
     plan: free
@@ -47,7 +48,7 @@ services:
     name: spring-postgres-redis-image
     runtime: image
     image:
-      url: ghcr.io/dangtranhuu/redis-spring:main
+      url: ghcr.io/davisycompany/spring-boot-postgresql-redis-render:main
     region: frankfurt
     plan: free
     healthCheckPath: /
