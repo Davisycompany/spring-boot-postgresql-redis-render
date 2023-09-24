@@ -80,7 +80,7 @@ public class Login {
 	}
 
 	
-	//@RedisCheck // Áp dụng kiểm tra Redis trước khi xử lý method này
+	@RedisCheck // Áp dụng kiểm tra Redis trước khi xử lý method này
 	@PostMapping("/v1/oauth/login")
 	public ResponseEntity<AuthenticationResponse> authLog(@RequestBody AuthenticationRequest authenticationRequest) {
 		LoginResponse resLog = authenticationService.loginResponseService(authenticationRequest);
